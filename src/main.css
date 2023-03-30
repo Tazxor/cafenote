@@ -1,8 +1,38 @@
 body {
     margin: 0;
-    background: #009578;
+    background: #E5DA78;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }
   
+  nav{
+    background: #BF7910;
+    color: white;
+    height: 10rem;
+
+  }
+h1{
+  width: 40rem;
+  font-size: 50px;
+  padding:10px;
+  float: right;
+  padding-right: 20%;
+
+}
+img{
+  height: 10rem;
+  width: 10rem;
+  float: left;
+
+}
+
+h2{
+ padding: 5%; 
+ text-align: left;
+ color: #BF7910;
+ font-size: 60px;
+
+}
+
   #app {
     display: grid;
     grid-template-columns: repeat(auto-fill, 200px);
@@ -18,7 +48,8 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 7px rgba(0, 0, 0, 0.15);
     resize: none;
-    font-family: sans-serif;
+    background: gray;
+    color: black;
     font-size: 16px;
   }
   
@@ -27,9 +58,9 @@ body {
     border: none;
     outline: none;
     background: rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    border-radius: 100%;
     font-size: 120px;
-    color: rgba(0, 0, 0, 0.5);
+    color: rgba(0, 0, 0, 0.2);
     cursor: pointer;
     transition: background 0.2s;
   }
@@ -37,4 +68,11 @@ body {
   .add-note:hover {
     background: rgba(0, 0, 0, 0.2);
   }
-  
+  p{
+    color: black;
+    text-align: center;
+;
+  }
+  ::-webkit-input-placeholder {
+    color: white;
+  }
