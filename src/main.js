@@ -1,8 +1,9 @@
 const notesContainer = document.getElementById("app");
 const addNoteButton = notesContainer.querySelector(".add-note");
+const hexColor = document.querySelector('#hexColor');
 
 getNotes().forEach((note) => {
-  const noteElement = createNoteElement(note.id, note.content);
+  const noteElement = createNoteElement(note.id, note.content, note.hexColor);
   notesContainer.insertBefore(noteElement, addNoteButton);
 });
 
@@ -21,12 +22,14 @@ function saveNotes(notes) {
 //
 
 //ici on crée la note 
-function createNoteElement(id, content) {
+function createNoteElement(id, content ) {
   const element = document.createElement("textarea");
 
   element.classList.add("note");
   element.value = content;
   element.placeholder = "note vide";
+
+
 
   element.addEventListener("change", () => {
     updateNote(id, element.value);
@@ -52,11 +55,16 @@ function addNote() {
   const noteObject = {
     // 
     id: Math.floor(Math.random() * 1000000),
-    content: ""
+    content: "",
+    hexColor: addEventListener('change', function() {
+      Array.from(element).forEach(v => v.style.color = this.value)
+
+    })
   };
+  
 //
 //
-  const noteElement = createNoteElement(noteObject.id, noteObject.content);
+  const noteElement = createNoteElement(noteObject.id, noteObject.content, noteObject.hexColor );
   notesContainer.insertBefore(noteElement, addNoteButton);
 //
 //

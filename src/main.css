@@ -48,7 +48,7 @@ h2{
     border-radius: 10px;
     box-shadow: 0 0 7px rgba(0, 0, 0, 0.15);
     resize: none;
-    background: gray;
+
     color: black;
     font-size: 16px;
   }
@@ -68,11 +68,13 @@ h2{
   .add-note:hover {
     background: rgba(0, 0, 0, 0.2);
   }
+
   p{
     color: black;
     text-align: center;
 ;
   }
+  
   ::-webkit-input-placeholder {
     color: white;
   }
